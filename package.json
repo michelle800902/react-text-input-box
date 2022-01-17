@@ -1,6 +1,6 @@
 {
   "name": "@michelle800902/react-text-input-box",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "React Component - TextInputBox",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -41,12 +41,19 @@
     "rollup": "^2.64.0",
     "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-dts": "^4.1.0",
+    "rollup-plugin-esbuild": "^4.8.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.31.1",
     "typescript": "^4.5.4"
   },
   "dependencies": {
+    "styled-components": "^5.3.3"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "styled-components": "^5.3.3"
   },
   "publishConfig": {
