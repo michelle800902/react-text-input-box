@@ -1,1 +1,2 @@
-export * from './components/TextInputBox';
+import TextInputBox from './components/TextInputBox';
+export { TextInputBox };
