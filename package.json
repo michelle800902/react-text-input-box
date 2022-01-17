@@ -2,8 +2,14 @@
   "name": "react-text-input-box",
   "version": "1.0.0",
   "description": "React Component - TextInputBox",
-  "main": "index.ts",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
   "scripts": {
+    "build": "rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -21,6 +27,9 @@
   "homepage": "https://github.com/michelle800902/react-text-input-box#readme",
   "devDependencies": {
     "@babel/core": "^7.16.7",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "@rollup/plugin-typescript": "^8.3.0",
     "@storybook/addon-actions": "^6.4.13",
     "@storybook/addon-essentials": "^6.4.13",
     "@storybook/addon-links": "^6.4.13",
@@ -31,9 +40,16 @@
     "babel-loader": "^8.2.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "rollup": "^2.64.0",
+    "rollup-plugin-dts": "^4.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
     "typescript": "^4.5.4"
   },
   "dependencies": {
     "styled-components": "^5.3.3"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/michelle800902"
   }
 }
