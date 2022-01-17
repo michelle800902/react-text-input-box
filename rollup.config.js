@@ -1,8 +1,9 @@
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import typescript from '@rollup/plugin-typescript';
+import typescript from 'rollup-plugin-typescript2';
 import external from 'rollup-plugin-peer-deps-external';
 import { terser } from 'rollup-plugin-terser';
+import del from 'rollup-plugin-delete';
 import pkg from './package.json';
 
 export default [
@@ -12,23 +13,21 @@ export default [
       {
         file: 'dist/index.js',
         format: 'esm',
-        sourcemap: true,
       },
       {
         file: pkg.main,
         format: 'cjs',
-        sourcemap: true,
       },
       {
         file: pkg.module,
         format: 'esm',
-        sourcemap: true,
       },
     ],
     plugins: [
+      del({ targets: ['dist/*'] }),
       resolve(),
       commonjs(),
-      typescript({ tsconfig: './tsconfig.json' }),
+      typescript(),
       external(),
       terser(),
     ],
