@@ -1,5 +1,5 @@
 {
-  "name": "react-text-input-box",
+  "name": "@michelle800902/react-text-input-box",
   "version": "1.0.0",
   "description": "React Component - TextInputBox",
   "main": "dist/index.cjs.js",
@@ -50,6 +50,6 @@
     "styled-components": "^5.3.3"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/michelle800902"
+    "registry": "https://npm.pkg.github.com"
   }
 }
